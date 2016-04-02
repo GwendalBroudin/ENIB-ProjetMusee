@@ -15,7 +15,7 @@
 			</a-entity>
 			<a-assets>
 			<a-mixin id="piloti" material="color: red" geometry="primitive: cylinder; height: 2; radius: 0.2" ></a-mixin>
-			
+
 		</a-assets>
 		<a-box color="#6173F4" width="34" height="0.1" depth="24">
 			<a-entity position="0 -1 0">
@@ -26,11 +26,33 @@
 			</a-entity>
 
 			<a-entity position="0 3 0">
+				<!-- Facades -->
 				<a-box color="#050505" width="0.1" height="6" depth="20" position="15 0 0"></a-box>
 				<a-box color="#050505" width="0.1" height="6" depth="20" position="-15 0 0"></a-box>
 				<a-box color="#050505" width="30" height="6" depth="0.1" position="0 0 -10"></a-box>
-				<!--  -->
-				<a-box color="#050505" width="30" height="6" depth="0.1" position="0 0 10" opacity="0.2"></a-box>
+
+				<!-- Awesome window -->
+				<a-box color="#050505" width="14" height="6" depth="0.1" position="8 0 10" opacity="0.2"></a-box>
+				<a-box color="#050505" width="14" height="6" depth="0.1" position="-8 0 10" opacity="0.2"></a-box>
+				<a-box color="#050505" width="2" height="3" depth="0.1" position="0 1.5 10" opacity="0.2"></a-box>
+
+				<!-- Encadrement de fenetres -->
+				<a-box color="#050505" width="0.1" height="3" depth="0.1" position="1 -1.5 10" ></a-box>
+				<a-box color="#050505" width="0.1" height="3" depth="0.1" position="-1 -1.5 10" ></a-box>
+				<a-box color="#050505" width="0.1" height="6" depth="0.1" position="-8 0 10" ></a-box>
+				<a-box color="#050505" width="0.1" height="6" depth="0.1" position="8 0 10" ></a-box>
+			</a-entity>
+
+			<!-- Facade salon -->
+			<a-entity position="0 1.5 5">
+				<a-box color="#050505" width="14" height="3" depth="0.1" position="8 0 0" ></a-box>
+				<a-box color="#050505" width="14" height="3" depth="0.1" position="-8 0 0" ></a-box>
+			</a-entity>
+
+			<!-- Couloir -->
+			<a-entity position="0 1.5 -5">
+
+
 			</a-entity>
 		</a-box>
 </a-scene>
