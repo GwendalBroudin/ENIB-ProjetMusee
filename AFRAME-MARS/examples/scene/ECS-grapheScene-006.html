@@ -1,0 +1,41 @@
+<!doctype thml>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"> </meta>
+    <title> Cube </title>
+    <script src="../../dist/aframe.min.js"> </script> 
+  </head>
+
+  <body>
+
+  <a-scene>
+
+			
+      <a-entity
+				geometry="primitive: box ; height: 5"
+				material="color: red"
+			> </a-entity>
+
+      <a-entity
+				geometry="primitive: sphere ; radius: 0.5"
+				material="color: green"
+				position="3.0 0.0 3.0"
+			> </a-entity>
+
+			<a-entity
+				geometry="primitive: cylinder; radius: 0.1 ; height: 2.0"	
+				material="color: pink"
+				position="-3.0 0.0 3.0"
+			></a-entity>
+
+			<a-entity
+				geometry="primitive: plane ; width: 5.0 ; height: 5.0"
+				material="color: orange ; side: double"
+				rotation = "90 0 0"
+			></a-entity>
+
+  </a-scene>
+  
+
+  </body>
+</html>

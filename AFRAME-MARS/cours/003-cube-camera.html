@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <title> 003-camera </title>
+  <script src="../dist/aframe.min.js"> </script>
+</head>
+
+<body>
+  <a-scene>
+  
+ 
+  
+  <!-- on place un repère dans la scène -->
+  
+  <a-sphere radius="0.2" ></a-sphere>
+  <a-cylinder height="2.0" color="green"  radius="0.05" translate="0 1.0 0"></a-cylinder>
+  <a-cylinder height="2.0" color="red"   radius="0.05" translate="0 1.0 0" rotation="0 0 -90"></a-cylinder>
+  <a-cylinder height="2.0" color="blue" radius="0.05" translate="0 1.0 0" rotation="90 0 0"></a-cylinder>
+  
+  
+  <a-camera 
+    fov     = "45"
+    rotation="0 45 0"
+    position="5 0 5">
+  </a-camera>
+  
+  <!-- on place un cube dans la scène -->
+  
+  <a-cube 
+    width="0.5" depth="1.5" height="3"
+    color="orange"
+  ></a-cube>
+  
+ 
+    
+
+  </a-scene>
+  
+ 
+
+
+</body>
+</html>

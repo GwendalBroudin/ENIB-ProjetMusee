@@ -1,0 +1,28 @@
+<!doctype thml>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"> </meta>
+    <title> "un cube" </title>
+    <script src="../../dist/aframe.min.js"> </script> 
+  </head>
+
+  <body>
+
+    <a-scene>
+      <a-light color="red" position="-1 1 0"></a-light>
+      <a-light color="blue" position="10 0 0" type="point"></a-light>
+      <a-camera  cursor-visible="false" position="6 1.8 23"></a-camera>
+      <a-sphere   id="origine" radius="0.1" color="red"> </a-sphere>
+      <a-sky src="images/sky1.jpg"></a-sky>
+      <a-cube     height="0.3" depth="0.3" width="0.3" translate="1 1 1" color="yellow"> </a-cube>
+      <a-sphere   radius="0.75" translate="2 2 1"> </a-sphere>
+      <a-image    width="3.0" height="2.0" src="images/MAN001.jpg" opacity="0.5"> </a-image>
+
+      <a-entity geometry="primitive: box; depth: 1; height: 1; width: 1"
+          material="color: pink"
+          light="intensity: 2"></a-entity>
+      </a-scene>
+  
+
+  </body>
+</html>

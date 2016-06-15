@@ -1,0 +1,3 @@
+Kd : coeff de réflexion diffuse = couleur du matériau (corresspond à un papier mat)
+Ks : Coeff deréflexion spéculaire = (corresspond a un papier brillant, réflé chi dans une seule direction)
+Ns : intensité de la lumière

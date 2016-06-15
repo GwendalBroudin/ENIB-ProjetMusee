@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+		<title>Musée</title>
+		<meta name="description" content="Hello, World! • A-Frame">
+		<script src="../AFRAME-MARS/dist/aframe.js"></script>
+	</head>
+
+
+
+
+<body>
+	<a-scene>
+
+		<a-assets>
+
+			<a-mixin id="piloti" material="color: red" geometry="primitive: cylinder; height: 2; radius: 0.2" ></a-mixin>
+
+		</a-assets>
+
+		<a-ocean width="200" depth="200" density="50" opacity="1" position="0 -4 0"></a-ocean>
+
+		<a-entity position="0 12 12">
+			<a-entity camera wasd-controls="fly:true" look-controls></a-entity>
+		</a-entity>
+
+		<!-- <a-entity id="camera" camera
+							universal-controls
+							kinematic-body
+							position="3 2 0"
+							jump-ability="enableDoubleJump: true;
+														distance: 2;">
+
+														<a-entity id="cursor" cursor="fuse: true;  maxDistance: 100; timeout: 200" geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01" material="color: red" position="0 0 -0.69" raycaster=""></a-entity>
+
+
+		</a-entity> -->
+
+		<a-box color="#6173F4" width="34" height="0.1" depth="24">
+			<a-entity position="0 -1 0">
+				<a-entity mixin="piloti" position="15 0 10"></a-entity>
+				<a-entity mixin="piloti" position="-15 0 10"></a-entity>
+				<a-entity mixin="piloti" position="15 0 -10"></a-entity>
+				<a-entity mixin="piloti" position="-15 0 -10"></a-entity>
+			</a-entity>
+
+			<!-- batiment -->
+			<a-entity position="0 3 0">
+				<!-- toit -->
+				<!-- <a-box color="#050505" width="30" height="0.1" depth="20" position="0 3 0"></a-box> -->
+
+				<!-- Facades -->
+				<a-box material="src: url(../src/textures/bois-2.jpg)" width="0.1" height="6" depth="20" position="15 0 0"></a-box>
+				<a-box color="#050505" width="0.1" height="6" depth="20" position="-15 0 0"></a-box>
+				<!-- nord -->
+				<a-box color="#050505" width="30" height="6" depth="0.1" position="0 0 -10"></a-box>
+				<!-- entrée vitrée sud -->
+				<a-box color="#050505" width="30" height="6" depth="0.1" position="0 0 10" opacity="0.2"></a-box>
+
+				<!-- cloisons-->
+				<a-entity>
+
+					<a-box color="#adebeb" width="30" height="4" depth="0.1" position="0 1 0"></a-box>
+					<!-- cloisons pièce 1-->
+					<a-entity position="-11.25 0 0">
+						<a-box color="#adebeb" width="0.1" height="6" depth="10" position="3.75 0 -5"></a-box>
+						<a-entity position="0 -2 0">
+							<a-box color="#adebeb" width="3" height="2" depth="0.1" position="2.25 0 0"></a-box>
+<!-- 							<a-box color="#000000" width="1.5" height="2" depth="0.1" position="0 0 0"></a-box>
+ -->							<a-box color="#adebeb" width="3" height="2" depth="0.1" position="-2.25 0 0"></a-box>
+						</a-entity>
+					</a-entity>
+
+					<!-- cloisons pièce 2-->
+					<a-entity position="-3.75 0 0">
+						<a-box color="#adebeb" width="0.1" height="6" depth="10" position="3.75 0 -5"></a-box>
+						<a-entity position="0 -2 0">
+							<a-box color="#adebeb" width="3" height="2" depth="0.1" position="2.25 0 0"></a-box>
+<!-- 							<a-box color="#000000" width="1.5" height="2" depth="0.1" position="0 0 0"></a-box>
+ -->							<a-box color="#adebeb" width="3" height="2" depth="0.1" position="-2.25 0 0"></a-box>
+						</a-entity>
+					</a-entity>
+
+					<!-- cloisons pièce 3-->
+					<a-entity position="3.75 0 0">
+						<a-box color="#adebeb" width="0.1" height="6" depth="10" position="3.75 0 -5"></a-box>
+						<a-entity position="0 -2 0">
+							<a-box color="#adebeb" width="3" height="2" depth="0.1" position="2.25 0 0"></a-box>
+<!-- 							<a-box color="#000000" width="1.5" height="2" depth="0.1" position="0 0 0"></a-box>
+ -->							<a-box color="#adebeb" width="3" height="2" depth="0.1" position="-2.25 0 0"></a-box>
+						</a-entity>
+					</a-entity>
+
+					<!-- cloisons pièce 4-->
+					<a-entity position="11.25 0 0">
+						<a-entity position="0 -2 0">
+							<a-box color="#adebeb" width="3" height="2" depth="0.1" position="2.25 0 0"></a-box>
+							<!-- <a-box color="#000000" width="1.5" height="2" depth="0.1" position="0 0 0"></a-box> -->
+							<a-box color="#adebeb" width="3" height="2" depth="0.1" position="-2.25 0 0"></a-box>
+						</a-entity>
+					</a-entity>
+
+				</a-entity>
+
+				<!-- pièce 1 -->
+				<a-entity position="-11.25 0 5">
+
+				</a-entity>
+				<!-- pièce 2 -->
+				<a-entity position="-3.75 0 5">
+				</a-entity>
+				<!-- pièce 3 -->
+				<a-entity position="3.75 0 5">
+				</a-entity>
+				<!-- pièce 4 -->
+				<a-entity position="11.25 0 5">
+				</a-entity>
+
+				<!-- Awesome window -->
+				<a-box color="#050505" width="14" height="6" depth="0.1" position="8 0 10" opacity="0.2"></a-box>
+				<a-box color="#050505" width="14" height="6" depth="0.1" position="-8 0 10" opacity="0.2"></a-box>
+				<a-box color="#050505" width="2" height="3" depth="0.1" position="0 1.5 10" opacity="0.2"></a-box>
+
+				<!-- Encadrement de fenetres -->
+				<a-box color="#050505" width="0.1" height="3" depth="0.1" position="1 -1.5 10" ></a-box>
+				<a-box color="#050505" width="0.1" height="3" depth="0.1" position="-1 -1.5 10" ></a-box>
+				<a-box color="#050505" width="0.1" height="6" depth="0.1" position="-8 0 10" ></a-box>
+				<a-box color="#050505" width="0.1" height="6" depth="0.1" position="8 0 10" ></a-box>
+			</a-entity>
+
+		</a-box>
+	</a-scene>
+</body>
+</html>

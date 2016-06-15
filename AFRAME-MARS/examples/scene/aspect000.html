@@ -1,0 +1,58 @@
+<!doctype thml>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"> </meta>
+    <title> Cube </title>
+    <script src="../../dist/aframe.min.js"> </script> 
+  </head>
+
+  <body>
+
+			<a-assets>
+  			<img id="fleurs" src="flowers.jpg">
+			</a-assets>
+
+  <a-scene>
+
+			<a-entity position="0 1.8 5">
+  			<a-entity camera="fov: 50" look-controls wasd-controls></a-entity>
+			</a-entity>
+
+			
+      <a-entity
+				geometry="primitive: box"
+				material="src: #fleurs"
+				position="0 1.0 0"
+			> </a-entity>
+
+      <a-entity
+				geometry="primitive: sphere ; radius: 0.5"
+				material="color: red"
+				position="0.0 2.5 0.0 "
+			> </a-entity>
+
+      <a-entity
+				geometry="primitive: sphere ; radius: 0.5"
+				material="color: green"
+				position="2.0 2.5 0.0 "
+			> </a-entity>
+
+      <a-entity
+				geometry="primitive: sphere ; radius: 0.5"
+				material="color: blue"
+				position="-2.0 2.5 0.0 "
+			> </a-entity>
+
+
+
+			<a-entity
+				geometry="primitive: plane ; width: 100.0 ; height: 100.0"
+				material="color: orange ; side: double"
+				rotation = "90 0 0"
+			></a-entity>
+
+  </a-scene>
+  
+
+  </body>
+</html>

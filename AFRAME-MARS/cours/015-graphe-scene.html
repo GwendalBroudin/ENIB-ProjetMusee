@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <title> 015-graphe-scene </title>
+  <script src="../dist/aframe.min.js"> </script>
+</head>
+
+<body>
+
+  <a-assets>
+    <a-mixin id="pilier" 
+             geometry="primitive: box; width: 1; depth: 1; height: 3"
+    ></a-mixin>
+  </a-assets>
+
+  <a-scene>
+  
+  <!-- on place un repère dans la scène -->
+  
+  <a-sphere radius="0.2" ></a-sphere>
+  <a-cylinder height="2.0" color="green"  radius="0.05" translate="0 1.0 0"></a-cylinder>
+  <a-cylinder height="2.0" color="red"   radius="0.05" translate="0 1.0 0" rotation="0 0 -90"></a-cylinder>
+  <a-cylinder height="2.0" color="blue" radius="0.05" translate="0 1.0 0" rotation="90 0 0"></a-cylinder>
+  
+  
+  <!-- on place un cube dans la scène -->
+  
+  <a-plane
+    width="100.0" height="100.0"
+    rotation="90 0 0"
+    color="yellow"
+  ></a-plane>
+  
+  <a-entity mixin="pilier" position = "-1.0 1.5 0.0" material="color: orange"
+  ></a-entity>
+
+  <a-entity mixin="pilier" position = "1.0 1.5 0.0" material="color: orange"
+  ></a-entity>
+
+ <a-entity mixin="pilier" 
+           rotation = "0 0 90"
+           position = "0.0 3.5 0.0" material="color: green"
+  ></a-entity>
+  
+ 
+
+  <a-entity position="10 0 0">
+
+  	<a-entity mixin="pilier" position = "-1.0 1.5 0.0" material="color: orange"
+  	></a-entity>
+
+  	<a-entity mixin="pilier" position = "1.0 1.5 0.0" material="color: orange"
+  	></a-entity>
+
+ 		<a-entity mixin="pilier" 
+           rotation = "0 0 90"
+           position = "0.0 3.5 0.0" material="color: green"
+  	></a-entity>
+
+	</a-entity>
+ 
+
+  </a-scene>
+  
+ 
+
+
+</body>
+</html>
